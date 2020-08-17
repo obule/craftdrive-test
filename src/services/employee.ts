@@ -18,10 +18,7 @@ export class EmployeeService {
     return employee;
   }
 
-  static findAll({
-    skip = undefined,
-    limit = undefined,
-  } = {}): EmployeeAttributes[] {
+  static findAll({ skip = 0, limit = 10 } = {}): EmployeeAttributes[] {
     const shouldPaginate = this.needsPaginationation(skip, limit);
     if (shouldPaginate) {
       return this.paginate(Employees, skip, limit);
@@ -57,11 +54,11 @@ export class EmployeeService {
    * @param limit number
    * @returns boolean
    */
-  static needsPaginationation(
-    skip: number | undefined,
-    limit: number | undefined,
-  ): boolean {
-    return Number.isInteger(skip) && Number.isInteger(limit);
+  static needsPaginationation(skip: number, limit: number): boolean {
+    return (
+      Number.isInteger(parseInt(skip.toString())) &&
+      Number.isInteger(parseInt(limit.toString()))
+    );
   }
 
   /**

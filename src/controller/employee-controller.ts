@@ -32,6 +32,13 @@ export class EmployeeController {
       return res.status(error.statusCode).send([{ message: error.message }]);
     }
   }
+
+  successMessage(data: any) {
+    return {
+      success: true,
+      data,
+    };
+  }
   static remove(req: Request, res: Response) {
     try {
       return res
