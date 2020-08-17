@@ -41,7 +41,7 @@ $ cd craftdrive-test
 # Install dependencies
 $ npm install
 
-# Create .env file for environmental variables in your root directory like the sample.env file and provide the keys
+# Create .env file for environmental variables in your root directory and add variable for PORT
 
 # Run the app
 $ npm start
