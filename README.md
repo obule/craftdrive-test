@@ -14,7 +14,7 @@ An endpoint to fetch employees. You can optionally send query parameters to fine
 
 ## Link to Hosted App
 
-- [API link](https://sf-legacy-api.herokuapp.com/api/v1/items)
+- [API link](https://craftdrive-api.herokuapp.com/employee)
 
 ## Tech Stack Used
 
@@ -72,6 +72,14 @@ $ npm run test
 - DELETE --- /employee/:id Delete employee
 
 ```
+
+## NOTE:
+
+Please add authorization header with this token to access the endpoints
+token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkbWluIEFkbWluIiwiaWF0IjoxNTE2MjM5MDIyLCJyb2xlIjoiYWRtaW4ifQ.9v5NoVLOjyj5HZwPkPFKb73heDebRT-WsohLqoPO8Qk
+
+Example:
+authorization: 'JWT token'
 
 ## Author
 
